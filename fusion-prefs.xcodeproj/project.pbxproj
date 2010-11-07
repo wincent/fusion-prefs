@@ -22,6 +22,7 @@
 		BC5070481287603A006F0550 /* debug-style.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = "debug-style.xcconfig"; path = "buildtools/debug-style.xcconfig"; sourceTree = "<group>"; };
 		BC5070491287603A006F0550 /* loadable-bundle-target.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = "loadable-bundle-target.xcconfig"; path = "buildtools/loadable-bundle-target.xcconfig"; sourceTree = "<group>"; };
 		BC50704A1287603A006F0550 /* release-style.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = "release-style.xcconfig"; path = "buildtools/release-style.xcconfig"; sourceTree = "<group>"; };
+		BC50705812876088006F0550 /* fusion-plugin-target.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = "fusion-plugin-target.xcconfig"; path = "../fusion/fusion-plugin-target.xcconfig"; sourceTree = SOURCE_ROOT; };
 		BC7DE6A212874C1D0027C712 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D2F7E65807B2D6F200F64583 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
@@ -121,6 +122,7 @@
 		BC7DE6A912874C4C0027C712 /* Configuration */ = {
 			isa = PBXGroup;
 			children = (
+				BC50705812876088006F0550 /* fusion-plugin-target.xcconfig */,
 				BC5070471287603A006F0550 /* base-style.xcconfig */,
 				BC5070481287603A006F0550 /* debug-style.xcconfig */,
 				BC5070491287603A006F0550 /* loadable-bundle-target.xcconfig */,
@@ -210,6 +212,7 @@
 /* Begin XCBuildConfiguration section */
 		1DEB913B08733D840010E9CD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BC50705812876088006F0550 /* fusion-plugin-target.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = Info.plist;
 				PRODUCT_NAME = "fusion-prefs";
@@ -218,6 +221,7 @@
 		};
 		1DEB913C08733D840010E9CD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BC50705812876088006F0550 /* fusion-plugin-target.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = Info.plist;
 				PRODUCT_NAME = "fusion-prefs";
