@@ -15,7 +15,7 @@
 		089C1672FE841209C02AAC07 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		089C167FFE841241C02AAC07 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
-		8D5B49B6048680CD000E48DA /* fusion-prefs.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "fusion-prefs.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D5B49B6048680CD000E48DA /* WOFPrefs.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WOFPrefs.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D5B49B7048680CD000E48DA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BC506FD012876013006F0550 /* buildtools */ = {isa = PBXFileReference; lastKnownFileType = folder; path = buildtools; sourceTree = "<group>"; };
 		BC5070471287603A006F0550 /* base-style.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = "base-style.xcconfig"; path = "buildtools/base-style.xcconfig"; sourceTree = "<group>"; };
@@ -99,7 +99,7 @@
 		19C28FB8FE9D52D311CA2CBB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8D5B49B6048680CD000E48DA /* fusion-prefs.bundle */,
+				8D5B49B6048680CD000E48DA /* WOFPrefs.bundle */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -149,7 +149,7 @@
 			name = "fusion-prefs";
 			productInstallPath = "$(HOME)/Library/Bundles";
 			productName = "fusion-prefs";
-			productReference = 8D5B49B6048680CD000E48DA /* fusion-prefs.bundle */;
+			productReference = 8D5B49B6048680CD000E48DA /* WOFPrefs.bundle */;
 			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
@@ -215,7 +215,7 @@
 			baseConfigurationReference = BC50705812876088006F0550 /* fusion-plugin-target.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = Info.plist;
-				PRODUCT_NAME = "fusion-prefs";
+				PRODUCT_NAME = WOFPrefs;
 			};
 			name = Debug;
 		};
@@ -224,7 +224,7 @@
 			baseConfigurationReference = BC50705812876088006F0550 /* fusion-plugin-target.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = Info.plist;
-				PRODUCT_NAME = "fusion-prefs";
+				PRODUCT_NAME = WOFPrefs;
 			};
 			name = Release;
 		};
