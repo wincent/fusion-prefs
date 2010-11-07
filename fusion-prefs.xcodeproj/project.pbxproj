@@ -18,6 +18,10 @@
 		8D5B49B6048680CD000E48DA /* fusion-prefs.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "fusion-prefs.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D5B49B7048680CD000E48DA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BC506FD012876013006F0550 /* buildtools */ = {isa = PBXFileReference; lastKnownFileType = folder; path = buildtools; sourceTree = "<group>"; };
+		BC5070471287603A006F0550 /* base-style.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = "base-style.xcconfig"; path = "buildtools/base-style.xcconfig"; sourceTree = "<group>"; };
+		BC5070481287603A006F0550 /* debug-style.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = "debug-style.xcconfig"; path = "buildtools/debug-style.xcconfig"; sourceTree = "<group>"; };
+		BC5070491287603A006F0550 /* loadable-bundle-target.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = "loadable-bundle-target.xcconfig"; path = "buildtools/loadable-bundle-target.xcconfig"; sourceTree = "<group>"; };
+		BC50704A1287603A006F0550 /* release-style.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = "release-style.xcconfig"; path = "buildtools/release-style.xcconfig"; sourceTree = "<group>"; };
 		BC7DE6A212874C1D0027C712 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D2F7E65807B2D6F200F64583 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
@@ -117,6 +121,10 @@
 		BC7DE6A912874C4C0027C712 /* Configuration */ = {
 			isa = PBXGroup;
 			children = (
+				BC5070471287603A006F0550 /* base-style.xcconfig */,
+				BC5070481287603A006F0550 /* debug-style.xcconfig */,
+				BC5070491287603A006F0550 /* loadable-bundle-target.xcconfig */,
+				BC50704A1287603A006F0550 /* release-style.xcconfig */,
 			);
 			name = Configuration;
 			sourceTree = "<group>";
@@ -218,12 +226,14 @@
 		};
 		1DEB913F08733D840010E9CD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BC5070481287603A006F0550 /* debug-style.xcconfig */;
 			buildSettings = {
 			};
 			name = Debug;
 		};
 		1DEB914008733D840010E9CD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BC50704A1287603A006F0550 /* release-style.xcconfig */;
 			buildSettings = {
 			};
 			name = Release;
