@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		8D5B49B0048680CD000E48DA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C167DFE841241C02AAC07 /* InfoPlist.strings */; };
 		8D5B49B4048680CD000E48DA /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */; };
+		BC50705F128760E3006F0550 /* WOFPrefs.m in Sources */ = {isa = PBXBuildFile; fileRef = BC50705E128760E3006F0550 /* WOFPrefs.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,8 @@
 		BC5070491287603A006F0550 /* loadable-bundle-target.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = "loadable-bundle-target.xcconfig"; path = "buildtools/loadable-bundle-target.xcconfig"; sourceTree = "<group>"; };
 		BC50704A1287603A006F0550 /* release-style.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = "release-style.xcconfig"; path = "buildtools/release-style.xcconfig"; sourceTree = "<group>"; };
 		BC50705812876088006F0550 /* fusion-plugin-target.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = "fusion-plugin-target.xcconfig"; path = "../fusion/fusion-plugin-target.xcconfig"; sourceTree = SOURCE_ROOT; };
+		BC50705D128760E3006F0550 /* WOFPrefs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WOFPrefs.h; sourceTree = "<group>"; };
+		BC50705E128760E3006F0550 /* WOFPrefs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WOFPrefs.m; sourceTree = "<group>"; };
 		BC7DE6A212874C1D0027C712 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D2F7E65807B2D6F200F64583 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
@@ -74,6 +77,8 @@
 		08FB77AFFE84173DC02AAC07 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				BC50705D128760E3006F0550 /* WOFPrefs.h */,
+				BC50705E128760E3006F0550 /* WOFPrefs.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -193,6 +198,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC50705F128760E3006F0550 /* WOFPrefs.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
