@@ -27,6 +27,7 @@
 		BC50705D128760E3006F0550 /* WOFPrefs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WOFPrefs.h; sourceTree = "<group>"; };
 		BC50705E128760E3006F0550 /* WOFPrefs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WOFPrefs.m; sourceTree = "<group>"; };
 		BC7DE6A212874C1D0027C712 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		BCDE8C851289D2EF00C7EF0E /* WOFMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WOFMenu.h; path = "../fusion-menu/WOFMenu.h"; sourceTree = SOURCE_ROOT; };
 		D2F7E65807B2D6F200F64583 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
@@ -45,6 +46,7 @@
 		089C166AFE841209C02AAC07 /* fusion-prefs */ = {
 			isa = PBXGroup;
 			children = (
+				BCDE8C821289D2C800C7EF0E /* Dependencies */,
 				BC7DE6A912874C4C0027C712 /* Configuration */,
 				BC7DE6A812874C420027C712 /* Submodules */,
 				08FB77AFFE84173DC02AAC07 /* Classes */,
@@ -134,6 +136,22 @@
 				BC50704A1287603A006F0550 /* release-style.xcconfig */,
 			);
 			name = Configuration;
+			sourceTree = "<group>";
+		};
+		BCDE8C821289D2C800C7EF0E /* Dependencies */ = {
+			isa = PBXGroup;
+			children = (
+				BCDE8C841289D2D200C7EF0E /* fusion-menu */,
+			);
+			name = Dependencies;
+			sourceTree = "<group>";
+		};
+		BCDE8C841289D2D200C7EF0E /* fusion-menu */ = {
+			isa = PBXGroup;
+			children = (
+				BCDE8C851289D2EF00C7EF0E /* WOFMenu.h */,
+			);
+			name = "fusion-menu";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
