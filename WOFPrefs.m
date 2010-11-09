@@ -24,7 +24,7 @@
 
 #import "WOFPrefs.h"
 
-#include "fusion-menu/WOFMenu.h"
+#import "fusion-menu/WOFMenu.h"
 
 @implementation WOFPrefs
 
