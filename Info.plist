@@ -26,7 +26,7 @@
 	<string>WOFPrefs</string>
 	<key>WOFPlugInDependencies</key>
 	<array>
-		<string>com.wincent.fusion.base</string>
+		<string>com.wincent.fusion.menu</string>
 	</array>
 </dict>
 </plist>
