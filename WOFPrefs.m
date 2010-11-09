@@ -24,6 +24,25 @@
 
 #import "WOFPrefs.h"
 
+#include "fusion-menu/WOFMenu.h"
+
 @implementation WOFPrefs
+
+- (void)activate
+{
+    WOFPlugIn *plugIn = [[WOFPlugInManager sharedManager] plugInForIdentifier:@"com.wincent.fusion.menu"];
+    WOFMenu *menuPlugIn = plugIn.instance;
+    NSMenuItem *item = [menuPlugIn menuItemForIdentifier:@"com.wincent.fusion.menu.application.prefs"];
+    [item setTarget:self];
+}
+
+- (void)orderFrontPreferencesPanel:(id)sender
+{
+    [[NSAlert alertWithMessageText:@"com.wincent.fusion.prefs"
+                     defaultButton:nil
+                   alternateButton:nil
+                       otherButton:nil
+         informativeTextWithFormat:@""] runModal];
+}
 
 @end
