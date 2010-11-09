@@ -32,7 +32,7 @@
 {
     WOFPlugIn *plugIn = [[WOFPlugInManager sharedManager] plugInForIdentifier:@"com.wincent.fusion.menu"];
     WOFMenu *menuPlugIn = plugIn.instance;
-    NSMenuItem *item = [menuPlugIn menuItemForIdentifier:@"com.wincent.fusion.menu.application.prefs"];
+    NSMenuItem *item = [menuPlugIn menuItemForIdentifier:@"com.wincent.fusion.menu.application.preferences"];
     [item setTarget:self];
 }
 
