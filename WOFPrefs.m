@@ -26,7 +26,20 @@
 
 #import "fusion-menu/WOFMenu.h"
 
+@interface WOFPrefs ()
+
+@property(readwrite, assign) NSMutableSet *panePaths;
+
+@end
+
 @implementation WOFPrefs
+
+- (id)init
+{
+    if ((self = [super init]))
+        self.panePaths = [NSMutableSet set];
+    return self;
+}
 
 - (void)activate
 {
@@ -44,5 +57,30 @@
                        otherButton:nil
          informativeTextWithFormat:@""] runModal];
 }
+
+#pragma mark Extension points
+
+- (void)registerPreferencePaneForPlugIn:(NSString *)identifier
+{
+    WOFPlugIn *plugIn = [[WOFPlugInManager sharedManager] plugInForIdentifier:identifier];
+    NSString *plugInPath = [plugIn bundlePath];
+    NSString *contentsPath = [plugInPath stringByAppendingPathComponent:@"Contents"];
+    NSString *prefPanesPath = [contentsPath stringByAppendingPathComponent:@"PreferencePanes"];
+    NSDirectoryEnumerator *enumerator = [[NSFileManager defaultManager] enumeratorAtPath:prefPanesPath];
+    NSMutableSet *paths = self.panePaths;
+    for (NSString *item in enumerator)
+    {
+        NSString *ext = [item pathExtension];
+        if (ext && [ext isEqualToString:@"prefPane"])
+        {
+            [paths addObject:[prefPanesPath stringByAppendingPathComponent:item]];
+            [enumerator skipDescendants];
+        }
+    }
+}
+
+#pragma mark Properties
+
+@synthesize panePaths;
 
 @end

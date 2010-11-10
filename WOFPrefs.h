@@ -30,4 +30,14 @@
 
 }
 
+#pragma mark Extension points
+
+//! Registers the plug-in identified by \p identifier, indicating that it
+//! contains a preference pane for display in the preferences window.
+//!
+//! Upon receiving the registration request, WOFPrefs searches the identified
+//! plug-in's "Contents/PreferencePanes/" directory for preference pane bundles
+//! with the "prefPane" extension.
+- (void)registerPreferencePaneForPlugIn:(NSString *)identifier;
+
 @end
