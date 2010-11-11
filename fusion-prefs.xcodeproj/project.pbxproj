@@ -32,6 +32,7 @@
 		BCC5BDCD128C668000A5DEE3 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/PrefsWindow.xib; sourceTree = "<group>"; };
 		BCC5C346128C7FD000A5DEE3 /* WOFPrefsWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WOFPrefsWindowController.h; sourceTree = "<group>"; };
 		BCC5C347128C7FD000A5DEE3 /* WOFPrefsWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WOFPrefsWindowController.m; sourceTree = "<group>"; };
+		BCC5C3A0128CA01800A5DEE3 /* WOPublic */ = {isa = PBXFileReference; lastKnownFileType = folder; path = WOPublic; sourceTree = "<group>"; };
 		BCDE8C851289D2EF00C7EF0E /* WOFMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WOFMenu.h; path = "../fusion-menu/WOFMenu.h"; sourceTree = SOURCE_ROOT; };
 		D2F7E65807B2D6F200F64583 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
@@ -129,6 +130,7 @@
 		BC7DE6A812874C420027C712 /* Submodules */ = {
 			isa = PBXGroup;
 			children = (
+				BCC5C3A0128CA01800A5DEE3 /* WOPublic */,
 				BC506FD012876013006F0550 /* buildtools */,
 			);
 			name = Submodules;
