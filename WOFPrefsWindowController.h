@@ -25,7 +25,7 @@
 #import <Cocoa/Cocoa.h>
 
 @interface WOFPrefsWindowController : NSWindowController {
-
+    IBOutlet NSProgressIndicator *spinner;
 }
 
 @end

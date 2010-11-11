@@ -24,6 +24,24 @@
 
 #import "WOFPrefsWindowController.h"
 
+@interface WOFPrefsWindowController ()
+
+@property NSProgressIndicator *spinner;
+
+@end
+
+
 @implementation WOFPrefsWindowController
+
+#pragma mark NSWindowController overrides
+
+- (void)windowDidLoad
+{
+    [self.spinner startAnimation:self];
+}
+
+#pragma mark Properties
+
+@synthesize spinner;
 
 @end
