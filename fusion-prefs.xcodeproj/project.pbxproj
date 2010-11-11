@@ -10,6 +10,7 @@
 		8D5B49B0048680CD000E48DA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C167DFE841241C02AAC07 /* InfoPlist.strings */; };
 		8D5B49B4048680CD000E48DA /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */; };
 		BC50705F128760E3006F0550 /* WOFPrefs.m in Sources */ = {isa = PBXBuildFile; fileRef = BC50705E128760E3006F0550 /* WOFPrefs.m */; };
+		BCC5BDCC128C667A00A5DEE3 /* PrefsWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCC5BDCB128C667A00A5DEE3 /* PrefsWindow.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		BC50705D128760E3006F0550 /* WOFPrefs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WOFPrefs.h; sourceTree = "<group>"; };
 		BC50705E128760E3006F0550 /* WOFPrefs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WOFPrefs.m; sourceTree = "<group>"; };
 		BC7DE6A212874C1D0027C712 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		BCC5BDCD128C668000A5DEE3 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/PrefsWindow.xib; sourceTree = "<group>"; };
 		BCDE8C851289D2EF00C7EF0E /* WOFMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WOFMenu.h; path = "../fusion-menu/WOFMenu.h"; sourceTree = SOURCE_ROOT; };
 		D2F7E65807B2D6F200F64583 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
@@ -72,6 +74,7 @@
 			children = (
 				8D5B49B7048680CD000E48DA /* Info.plist */,
 				089C167DFE841241C02AAC07 /* InfoPlist.strings */,
+				BCC5BDCB128C667A00A5DEE3 /* PrefsWindow.xib */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -206,6 +209,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D5B49B0048680CD000E48DA /* InfoPlist.strings in Resources */,
+				BCC5BDCC128C667A00A5DEE3 /* PrefsWindow.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -229,6 +233,14 @@
 				BC7DE6A212874C1D0027C712 /* en */,
 			);
 			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		BCC5BDCB128C667A00A5DEE3 /* PrefsWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BCC5BDCD128C668000A5DEE3 /* en */,
+			);
+			name = PrefsWindow.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
