@@ -53,7 +53,8 @@
 
 - (void)orderFrontPreferencesPanel:(id)sender
 {
-    self.windowController = [[WOFPrefsWindowController alloc] initWithWindowNibName:@"PrefsWindow"];
+    if (!self.windowController)
+        self.windowController = [[WOFPrefsWindowController alloc] initWithWindowNibName:@"PrefsWindow"];
     [self.windowController showWindow:self];
 }
 
