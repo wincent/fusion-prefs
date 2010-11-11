@@ -42,5 +42,6 @@
 #pragma mark Properties
 
 @synthesize spinner;
+@synthesize panes;
 
 @end

@@ -28,4 +28,8 @@
     IBOutlet NSProgressIndicator *spinner;
 }
 
+#pragma mark Properties
+
+@property(assign) NSArray *panes;
+
 @end

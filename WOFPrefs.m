@@ -80,6 +80,7 @@
     {
         self.windowController = [[WOFPrefsWindowController alloc] initWithWindowNibName:@"PrefsWindow"];
         [self preparePanes];
+        [self.windowController setPanes:self.panes];
     }
     [self.windowController showWindow:self];
 }
