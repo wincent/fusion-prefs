@@ -30,7 +30,6 @@
 
 @end
 
-
 @implementation WOFPrefsWindowController
 
 #pragma mark NSWindowController overrides
