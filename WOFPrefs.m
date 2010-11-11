@@ -25,10 +25,12 @@
 #import "WOFPrefs.h"
 
 #import "fusion-menu/WOFMenu.h"
+#import "WOFPrefsWindowController.h"
 
 @interface WOFPrefs ()
 
 @property(readwrite, assign) NSMutableSet *panePaths;
+@property WOFPrefsWindowController *windowController;
 
 @end
 
@@ -51,11 +53,8 @@
 
 - (void)orderFrontPreferencesPanel:(id)sender
 {
-    [[NSAlert alertWithMessageText:@"com.wincent.fusion.prefs"
-                     defaultButton:nil
-                   alternateButton:nil
-                       otherButton:nil
-         informativeTextWithFormat:@""] runModal];
+    self.windowController = [[WOFPrefsWindowController alloc] initWithWindowNibName:@"PrefsWindow"];
+    [self.windowController showWindow:self];
 }
 
 #pragma mark Extension points
@@ -82,5 +81,6 @@
 #pragma mark Properties
 
 @synthesize panePaths;
+@synthesize windowController;
 
 @end
