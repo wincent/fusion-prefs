@@ -40,4 +40,16 @@
 //! with the "prefPane" extension.
 - (void)registerPreferencePaneForPlugIn:(NSString *)identifier;
 
+#pragma mark Info.plist keys
+
+//! An integer indicating the position (sort order) of the preference pane.
+//!
+//! If unset, defaults to zero.
+//!
+//! To make a pane appear further to the left, use a smaller (or negative)
+//! number.
+//!
+//! To make a pane appear further to the right, use a larger number.
+extern NSString *WOFPositionIndex;
+
 @end

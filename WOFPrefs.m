@@ -27,9 +27,13 @@
 #import "fusion-menu/WOFMenu.h"
 #import "WOFPrefsWindowController.h"
 
+// WOPublic headers
+#import "WOPublic/WOConvenienceMacros.h"
+
 @interface WOFPrefs ()
 
 @property(readwrite, assign) NSMutableSet *panePaths;
+@property(copy) NSArray *panes;
 @property WOFPrefsWindowController *windowController;
 
 @end
@@ -51,10 +55,32 @@
     [item setTarget:self];
 }
 
+- (void)preparePanes
+{
+    if ([self.panes count] == 0)
+    {
+        NSMutableArray *panes = [NSMutableArray arrayWithCapacity:[self.panePaths count]];
+        for (NSString *path in self.panePaths)
+            [panes addObject:[NSBundle bundleWithPath:path]];
+        self.panes = [panes sortedArrayUsingComparator:^(id pane1, id pane2) {
+            NSNumber *pane1idx = [[pane1 infoDictionary] objectForKey:WOFPositionIndex];
+            if (!pane1idx || ![pane1idx isKindOfClass:[NSNumber class]])
+                pane1idx = [NSNumber numberWithInt:0];
+            NSNumber *pane2idx = [[pane2 infoDictionary] objectForKey:WOFPositionIndex];
+            if (!pane2idx || ![pane2idx isKindOfClass:[NSNumber class]])
+                pane2idx = [NSNumber numberWithInt:0];
+            return [pane1idx compare:pane2idx];
+        }];
+    }
+}
+
 - (void)orderFrontPreferencesPanel:(id)sender
 {
     if (!self.windowController)
+    {
         self.windowController = [[WOFPrefsWindowController alloc] initWithWindowNibName:@"PrefsWindow"];
+        [self preparePanes];
+    }
     [self.windowController showWindow:self];
 }
 
@@ -82,6 +108,11 @@
 #pragma mark Properties
 
 @synthesize panePaths;
+@synthesize panes;
 @synthesize windowController;
+
+#pragma mark Info.plist keys
+
+WO_EXPORT NSString *WOFPositionIndex = @"WOFPositionIndex";
 
 @end
